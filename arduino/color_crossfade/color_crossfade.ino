@@ -52,9 +52,9 @@
 */ 
 
 // Output
-int redPin = 11;   // Red LED,   connected to digital pin 9
-int grnPin = 10;  // Green LED, connected to digital pin 10
-int bluPin = 9;  // Blue LED,  connected to digital pin 11
+int redPin = 9;   // Red LED,   connected to digital pin 9
+int grnPin = 11;  // Green LED, connected to digital pin 10
+int bluPin = 10;  // Blue LED,  connected to digital pin 11
 
 // Color arrays
 int black[3]  = { 0, 0, 0 };
@@ -75,7 +75,7 @@ int grnVal = blue[1];
 int bluVal = blue[2];
 
 int wait = 1000;      // 10ms internal crossFade delay; increase for slower fades
-int hold = 60000;       // Optional hold when a color is complete, before the next crossFade
+int hold = 6000;       // Optional hold when a color is complete, before the next crossFade
 int DEBUG = 1;      // DEBUG counter; if set to 1, will write values back via serial
 int loopCount = 10; // How often should DEBUG report?
 int repeat = 0;     // How many times should we loop before stopping? (0 for no stop)
@@ -103,6 +103,20 @@ void setup()
 // Main program: list the order of crossfades
 void loop()
 {
+
+/*  
+  while (1){
+     
+    analogWrite(redPin,0);
+    analogWrite(grnPin,0);
+    analogWrite(bluPin,255);
+    
+    
+    delay(100000);
+      
+  }
+  
+*/  
   int lights_on = digitalRead(13);
 
   if (DEBUG) {
