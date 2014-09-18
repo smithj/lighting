@@ -117,7 +117,7 @@ void loop()
   }
   
 */  
-  int lights_on = true; //digitalRead(13);
+  int lights_on = digitalRead(13);
 
   if (DEBUG) {
     Serial.println("Light control pin: " + lights_on);
